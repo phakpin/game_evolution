@@ -21,4 +21,4 @@ Go to root folder and run:
 
 This is what the app looks like:
 
-<img src="https://github.com/phakpin/game_evolution/Screens/01.png" alt="App screenshot">
+<img src="https://github.com/phakpin/game_evolution/blob/main/Screens/01.png" alt="App screenshot">
