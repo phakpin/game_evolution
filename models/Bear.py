@@ -50,13 +50,10 @@ class Bear(TheThing):
     self.update_image()
     self.brain.make_decision()
 
-  def make_copule(self, partner):
-    if not self.can_copule() or not partner.can_copule():
-      return False
+  def make_copule(self):
     super().make_copule()
     self.copule_timer.set_timer(Conf.COPULE_TIME_BEAR)
     self.cant_copule_timer.set_timer(Conf.COPULE_TIME_BEAR*2)
-    return True
   
   def make_dead(self):
     super().make_dead()

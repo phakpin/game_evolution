@@ -111,7 +111,9 @@ class Game():
         second_bear.Sense_copule(bear)
 
         if self.utils.IsCollision(bear, second_bear):
-          if bear.make_copule(second_bear) and second_bear.make_copule(bear):
+          if bear.can_copule() and second_bear.can_copule():
+            bear.make_copule()
+            second_bear.make_copule()
             self.EggCollection.append(self.factory.GetEggBear(bear, second_bear))
         
       #bear - tree
@@ -139,7 +141,9 @@ class Game():
         if predator is predaror_second:
           continue
         if self.utils.IsCollision(predator, predaror_second):
-            if predator.make_copule(predaror_second) and predaror_second.make_copule(predator):
+            if predator.can_copule() and predaror_second.can_copule():
+              predator.make_copule()
+              predaror_second.make_copule()
               self.EggCollection.append(self.factory.GetEggPredator(predator, predaror_second))
 
       # carrion to predator

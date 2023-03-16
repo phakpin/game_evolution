@@ -60,13 +60,10 @@ class Predator(TheThing):
     self.update_image()
     self.brain.make_decision()
 
-  def make_copule(self, partner):
-    if not self.can_copule_predator() or not partner.can_copule_predator():
-      return False
+  def make_copule(self):
     super().make_copule()
     self.copule_timer.set_timer(Conf.COPULE_TIME_PREDATOR)
     self.cant_copule_timer.set_timer(Conf.COPULE_TIME_PREDATOR * 2)
-    return True
 
   def update_image(self):
     if self.is_dead:

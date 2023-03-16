@@ -94,6 +94,7 @@ class Brain_Bear(Brain):
         self.should_stop()
         self.should_go_for_eat()
         self.should_run()
+        self.should_copule()
         self.clean_visibility()
     
     def should_stop(self):
